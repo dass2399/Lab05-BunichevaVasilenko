@@ -1,4 +1,7 @@
-﻿int dayNumber = 6;
+﻿using System.Drawing;
+using System.Threading.Tasks.Dataflow;
+
+int dayNumber = 6;
 
 switch (dayNumber) {
     case 6 or 7: Console.WriteLine("Выходной"); break;
@@ -81,3 +84,135 @@ string result = temp switch
 };
 
 Console.WriteLine(result);
+
+string role = "user";
+
+string result = role switch
+{
+    "admin" => "Полный доступ",
+    not "admin" => "Ограниченный доступ"
+};
+
+Console.WriteLine(result);
+
+string role = "user";
+
+string result = role switch
+{
+    "admin" => "Полный доступ",
+    "teacher" => "Доступ преподавателя",
+    not "admin" => "Ограниченный доступ"
+};
+
+Console.WriteLine(result);
+
+
+int age = 20;
+bool hasTicket = true;
+
+switch (age)
+{
+    case >= 18 when hasTicket:
+        Console.WriteLine("Вход разрешен");
+        break;
+    case >= 18:
+        Console.WriteLine("Нет билета");
+        break;
+    default:
+        Console.WriteLine("Возраст не подходит");
+        break;
+}
+
+
+int age = 20;
+bool hasTicket = true;
+
+switch (age)
+{
+    case >= 18 when hasTicket:
+        Console.WriteLine("Вход разрешен");
+        break;
+    case >= 18:
+        Console.WriteLine("Нет билета");
+        break;
+    default:
+        Console.WriteLine("Возраст не подходит");
+        break;
+}
+
+
+int level = 2;
+
+switch (level)
+{
+    case 1:
+        Console.WriteLine("Начальный уровень");
+        break;
+    case 2:
+        Console.WriteLine("Средний уровень");
+        break;
+    case 3:
+        Console.WriteLine("Продвинутый уровень");
+        break;
+}
+
+Буничева 4 вариант
+
+string size = "M";
+bool isStudent = true;
+
+int price = 0;
+
+switch (Size) {
+    case "S":
+        price = 150;
+        break;
+    case "M":
+        price = 200;
+        break;
+    case "L":
+        price = 250;
+        break;
+    default:
+        Console.WriteLine("Неизвестный размер");
+        break;
+}
+
+if (price > 0)
+{
+    if (isStudent)
+    {
+        price = price - (price / 10);
+    }
+    Console.WriteLine(price + "руб.");
+}
+
+Буничева 9 вариант
+
+int hour = 14;
+
+switch hour {
+    case hour >= 0 and hour <= 5:
+        Console.WriteLine("Ночной тариф");
+        break;
+    case hour >= 6 and hour <= 9:
+        Console.WriteLine("Утренний тариф");
+        break;
+    case hour >= 10 and hour <= 17:
+        Console.WriteLine("Дневной тариф");
+        break;
+    case hour >= 18 and hour <= 23:
+        Console.WriteLine("Вечерний тариф");
+        break;
+    default:
+        Console.WriteLine("Некорректное время");
+        break;
+}
+
+Василенко 2 вариант
+
+Console.Write("Введтте число от 0 до 100: ");
+
+int number = int.Parse(Console.ReadLine());
+
+
